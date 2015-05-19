@@ -4,7 +4,7 @@
 <thead>
 	<tr>
 		<th>#</th>
-		<th>제목</th>
+		<th>{$lang->music_title}</th>
 		<th>앨범</th>
 		<th>아티스트</th>
 		<th>장르</th>
@@ -19,7 +19,7 @@
 		<td>{$music->album}</td>
 		<td>{$music->artist}</td>
 		<td>?</td>
-		<td>{$music->regdate}</td>
+		<td>{zdate($music->regdate)}</td>
 		<td>
 			<a href="{getUrl('act', 'dispMusicboxAdminUploadMusic', 'music_srl', $music->music_srl)}">
 				{$lang->cmd_modify}
