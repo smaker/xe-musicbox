@@ -1,0 +1,54 @@
+<include target="header.html" />
+
+<!-- 정보 -->
+<div class="summary">
+	<strong>Total</strong> <em>{number_format($total_count)}</em>, Page <strong>{number_format($page)}</strong>/{number_format($total_page)}
+</div>
+
+<!-- 목록 -->
+<form action="./" method="get" id="fo_list">
+<table cellspacing="0" class="rowTable">
+<thead>
+	<tr>
+		<th scope="col"><div>{$lang->no}</div></th>
+		<th scope="col"><div><input type="checkbox" onclick="XE.checkboxToggleAll(); return false;" /></div></th>
+		<th scope="col"><div>{$lang->title}</div></th>
+		<th scope="col"><div>{$lang->description}</div></th>
+		<th scope="col" colspan="3"><div>&nbsp;</div></th>
+	</tr>
+</thead>
+<tbody>
+	<!--@foreach($playlist_list as $no => $val)-->
+	<tr>
+		<td class="center number">{$no}</td>
+		<td class="center"><input type="checkbox" name="cart" value="{$val->playlist_srl}" /></td>
+		<td><a href="{getUrl('act', 'dispSplayerAdminInsertPlaylist', 'playlist_srl', $val->playlist_srl)}" onclick="window.open(this.href); return false;">{htmlspecialchars($val->title)}</a></td>
+		<td>{$val->comment}</td>
+		<td>{zdate($val->regdate,"Y-m-d")}</td>
+		<td><a href="{getUrl('act','dispSplayerAdminPlayerInfo','module_srl',$val->module_srl)}" class="buttonSet buttonSetting" title="{$lang->cmd_setup}"><span>{$lang->cmd_setup}</span></a></td>
+		<td><a href="{getUrl('','module','module','act','dispModuleAdminCopyModule','module_srl',$val->module_srl)}" onclick="popopen(this.href);return false;" class="buttonSet buttonCopy" title="{$lang->cmd_copy}"><span>{$lang->cmd_copy}</span></a></td>
+		<td><a href="{getUrl('act','dispSplayerAdminDeletePlayer','module_srl', $val->module_srl)}" class="buttonSet buttonDelete" title="{$lang->cmd_delete}"><span>{$lang->cmd_delete}</span></a></td>
+	</tr>
+	<!--@end-->
+</tbody>
+</table>
+</form>
+
+<div class="clear">
+	<div class="fr">
+		<a href="{getUrl('act','dispSplayerAdminInsertPlaylist','playlist_srl','')}" class="button black strong"><span>{$lang->cmd_make}</span></a>
+	</div>
+</div>
+
+<!-- 페이지 네비게이션 -->
+<div class="pagination a1">
+	<a href="{getUrl('page','','module_srl','')}" class="prevEnd">{$lang->first_page}</a> 
+	<!--@while($page_no = $page_navigation->getNextPage())-->
+		<!--@if($page == $page_no)-->
+			<strong>{$page_no}</strong> 
+		<!--@else-->
+			<a href="{getUrl('page',$page_no,'module_srl','')}">{$page_no}</a> 
+		<!--@end-->
+	<!--@end-->
+	<a href="{getUrl('page',$page_navigation->last_page,'module_srl','')}" class="nextEnd">{$lang->last_page}</a>
+</div>

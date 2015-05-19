@@ -1,0 +1,18 @@
+<query id="updateMusic" action="update">
+	<tables>
+		<table name="musicbox_music" />
+	</tables>
+	<columns>
+		<column name="title" var="title" notnull="notnull" />
+		<column name="artist" var="artist" notnull="notnull" />
+		<column name="album" var="album" default="" />
+		<column name="source_filename" var="source_filename" />
+		<column name="uploaded_filename" var="uploaded_filename" />
+		<column name="file_size" var="file_size" />
+		<column name="lyric" var="lyric" />
+		<column name="comment" var="comment" />
+	</columns>
+	<conditions>
+		<condition operation="equal" column="music_srl" var="music_srl" notnull="notnull" />
+	</conditions>
+</query>

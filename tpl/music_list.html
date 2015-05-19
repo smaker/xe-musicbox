@@ -1,0 +1,34 @@
+<include target="header.html" />
+
+<table class="x_table x_table=striped">
+<thead>
+	<tr>
+		<th>#</th>
+		<th>제목</th>
+		<th>앨범</th>
+		<th>아티스트</th>
+		<th>장르</th>
+		<th>등록일</th>
+		<th>&nbsp;</th>
+	</tr>
+</thead>
+<tbody>
+	<tr loop="$music_list => $no, $music">
+		<td>{$no}</td>
+		<td>{$music->title}</td>
+		<td>{$music->album}</td>
+		<td>{$music->artist}</td>
+		<td>?</td>
+		<td>{$music->regdate}</td>
+		<td>
+			<a href="{getUrl('act', 'dispMusicboxAdminUploadMusic', 'music_srl', $music->music_srl)}">
+				{$lang->cmd_modify}
+			</a>
+		</td>
+	</tr>
+</tbody>
+</table>
+
+<div class="btnArea">
+	<a href="{getUrl('act', 'dispMusicboxAdminUploadMusic')}" class="x_btn x_btn-primary">음원 추가</a>
+</div>

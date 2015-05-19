@@ -1,0 +1,43 @@
+<include target="header.html" />
+
+<load target="filter/insert_playlist.xml" />
+<load target="js/splayer_admin.js" />
+
+<form action="./" method="post" onsubmit="return procFilter(this, insert_playlist)" enctype="multipart/form-data">
+<input type="hidden" name="page" value="{$page}" />
+<input type="hidden" name="playlist_srl" value="{$playlist_info->module_srl}" />
+
+	<table cellspacing="0" class="rowTable">
+	<tr>
+		<th scope="row"><div>{$lang->playlist_title}</div></th>
+		<td>
+			<input type="text" name="playlist_title" value="{htmlspecialchars($playlist_info->title)}" class="inputTypeText w200" />
+			<p>{$lang->about_playlist_title}</p>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row"><div>{$lang->music_list}</div></th>
+		<td>
+			<input type="hidden" id="mList" name="music_list" value="{$playlist_info->musics}" />
+			<select id="_mList" size="{count($music_list)+1}"multiple="multiple" style="min-width:200px">
+			</select>
+			<p><a href="{getUrl('', 'module', 'splayer', 'act', 'dispSplayerAdminMusicList', 'is_popup', 1)}" onclick="popopen(this.href); return false" class="button blue"><span>{$lang->cmd_insert}</span></a> <a href="" class="button red"><span>{$lang->cmd_delete}</span></a></p>
+			<p>{$lang->about_playlist_music}</p>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row"><div>{$lang->description}</div></th>
+		<td>
+			<textarea name="comment" class="inputTypeTextArea fullWidth">{htmlspecialchars($module_info->description)}</textarea>
+			<p>{$lang->about_playlist_description}</p>
+		</td>
+	</tr>
+	<tr>
+		<th colspan="2" class="button">
+			<span class="button black strong"><input type="submit" value="{$lang->cmd_registration}" accesskey="s" /></span>
+			<span class="button"><input type="button" value="{$lang->cmd_back}" onclick="history.back(); return false;" /></span>
+		</th>
+	</tr>
+	</table>
+
+</form>

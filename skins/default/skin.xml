@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin version="0.2">
+	<title xml:lang="ko">Blue Monkey 테마</title>
+	<description xml:lang="ko">
+		jPlayer에서 제공하는 Blue Monkey 테마를 XE용으로 포팅한 스킨입니다.
+	</description>
+	<version>0.1</version>
+	<date>2015-02-24</date>
+	<!--<date>2011-02-14</date>-->
+
+	<author email_address="contact@funnyxe.com" link="http://funnyxe.com/">
+		<name xml:lang="ko">퍼니엑스이</name>
+	</author>
+
+	<extra_vars>
+	</extra_vars>
+</skin>

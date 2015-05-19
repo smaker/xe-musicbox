@@ -1,0 +1,19 @@
+<query id="getAdminPlaylists" action="select">
+	<tables>
+		<table name="splayer_playlist" />
+	</tables>
+	<columns>
+		<column name="playlist_srl" /> 
+		<column name="title" /> 
+		<column name="comment" />
+		<column name="regdate" />
+	</columns>
+	<conditions>
+	</conditions>
+	<navigation>
+		<index var="sort_index" default="playlist_srl" order="desc" />
+		<list_count var="list_count" default="20" />
+		<page_count var="page_count" default="10" />
+		<page var="page" default="1" />
+	</navigation>
+</query>

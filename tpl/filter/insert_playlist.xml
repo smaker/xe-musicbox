@@ -1,0 +1,17 @@
+<filter name="insert_playlist" module="splayer" act="procSplayerAdminInsertPlaylist" confirm_msg_code="confirm_submit">
+	<form>
+		<node target="playlist_title" required="true" maxlength="250" />
+		<node target="music_list" required="true" />
+	</form>
+	<parameter>
+		<param name="playlist_title" target="playlist_title" />
+		<param name="music_list" target="music_srl" />
+	</parameter>
+	<response callback_func="completeInsertPlaylist">
+		<tag name="error" />
+		<tag name="message" />
+		<tag name="module" />
+		<tag name="act" />
+		<tag name="page" />
+	</response>
+</filter>

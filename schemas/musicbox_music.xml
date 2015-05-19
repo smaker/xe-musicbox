@@ -1,0 +1,13 @@
+<table name="musicbox_music">
+	<column name="music_srl" type="number" size="11" notnull="notnull" primary_key="primary_key" />
+	<column name="module_srl" type="number" size="11" notnull="notnull" />
+	<column name="title" type="varchar" size="250" notnull="notnull" />
+	<column name="artist" type="varchar" size="250" notnull="notnull" />
+	<column name="album" type="varchar" size="250" notnull="notnull" />
+	<column name="source_filename" type="varchar" size="250" />
+	<column name="uploaded_filename" type="varchar" size="250" />
+	<column name="file_size" type="number" size="11" default="0" notnull="notnull" index="idx_file_size" />
+	<column name="lyric" type="bigtext" notnull="notnull" /> 
+	<column name="comment" type="varchar" size="250" />
+	<column name="regdate" type="date" index="idx_regdate" />
+</table>
