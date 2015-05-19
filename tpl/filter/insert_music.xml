@@ -1,0 +1,10 @@
+<filter name="insert_music" confirm_msg_code="confirm_submit">
+	<form>
+		<node target="music_title" required="true" maxlength="250" />
+		<node target="music_file" required="true" />
+		<node target="artist" required="true" maxlength="250" />
+		<node target="album" maxlength="250" />
+		<node target="comment" maxlength="comment" />
+		
+	</form>
+</filter>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module>
+	<grants>
+		<grant name="listen">
+			<title xml:lang="ko">음악 듣기</title>
+		</grant>
+	</grants>
+	<permissions />
+	<actions>
+		<action name="dispMusicboxAdminContent" type="view" admin_index="true" />
+		<action name="dispMusicboxAdminPlayerInfo" type="view" setup_index="true" />
+		<action name="dispMusicboxAdminPlayerAdditionSetup" type="view" />
+		<action name="dispMusicboxAdminGrantInfo" type="view" />
+		<action name="dispMusicboxAdminInsertPlayer" type="view" />
+		<action name="dispMusicboxAdminDeletePlayer" type="view" />
+
+		<action name="dispMusicboxAdminManagePlaylist" type="view" standalone="true" />
+		<action name="dispMusicboxAdminInsertPlaylist" type="view" standalone="true" />
+		<action name="dispMusicboxAdminDeletePlaylist" type="view" standalone="true" />
+
+		<action name="dispMusicboxAdminMusicList" type="view" standalone="true" />
+
+		<action name="dispMusicboxAdminUploadMusic" type="view" />
+		<action name="dispMusicboxAdminDeleteMusic" type="view" />
+
+		<action name="procMusicboxAdminUploadMusic" type="controller" />
+		<action name="procMusicboxAdminDeletePlayer" type="controller" />
+
+		<action name="procMusicboxAdminInsertMusic" type="controller" />
+		<action name="procMusicboxAdminDeleteMusic" type="controller" />
+
+		<action name="dispMusicbox" type="view" index="true" />
+		<action name="getMusicboxLyric" type="model" />
+	</actions>
+</module>

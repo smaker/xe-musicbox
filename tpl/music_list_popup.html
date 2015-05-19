@@ -1,0 +1,37 @@
+<!--%import("js/splayer_admin.js")-->
+<div id="popHeader" class="wide">
+	<h3 class="xeAdmin">{$lang->music_list}</h3>
+</div>
+
+<form action="./" method="get" id="fo_management">
+<input type="hidden" name="type" value="" />
+
+
+<div id="popBody">
+<!--@if(count($music_list)==0)-->
+{$lang->msg_not_exists_music_list}
+<!--@else-->
+	<table cellspacing="0" class="rowTable">
+	<thead>
+	<tr>
+		<th>{$lang->music_title}</th>
+		<th>{$lang->artist}</th>
+		<th>{$lang->album}</th>
+		<th>&nbsp;</th>
+	</tr>
+	</thead>
+	<!--@foreach($music_list as $key => $val)-->
+	<tr>
+		<td>{htmlspecialchars($val->title)}</td>
+		<td>{$val->artist}</td>
+		<td>{$val->album}</td>
+		<td><a href="#" onclick="insertMusic('mList', {$val->music_srl}, '{htmlspecialchars($val->title)}', '{$val->artist}'); return false;" class="button green"><span>{$lang->cmd_insert}</span></a></td>
+	</tr>
+	<!--@end-->
+	</table>
+<!--@end-->
+	<a href="{getUrl('act', 'dispSplayerAdminInsertMusic')}" class="button black"><span>{$lang->cmd_upload_music}</span></a>
+</div>
+
+<div id="popFooter"></div>
+</form>

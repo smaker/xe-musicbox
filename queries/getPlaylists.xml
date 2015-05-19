@@ -1,0 +1,16 @@
+<query id="getPlaylists" action="select">
+	<tables>
+		<table name="splayer_playlist" />
+	</tables>
+	<columns>
+		<column name="playlist_srl" /> 
+		<column name="title" /> 
+		<column name="comment" />
+		<column name="regdate" />
+	</columns>
+	<conditions>
+	</conditions>
+	<navigation>
+		<index var="sort_index" default="playlist_srl" order="desc" />
+	</navigation>
+</query>

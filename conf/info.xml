@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module version="0.2">
+	<title xml:lang="ko">뮤직박스</title>
+	<description xml:lang="ko">음악 플레이어를 제공합니다.</description>
+	<version>0.1</version>
+	<!--<date>2011-02-14</date>-->
+	<date>2015-02-21</date>
+	<category>service</category>
+
+	<author email_address="contact@funnyxe.com" link="http://funnyxe.com/">
+		<name xml:lang="ko">SMaker</name>
+	</author>
+</module>

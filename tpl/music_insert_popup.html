@@ -1,0 +1,40 @@
+<div id="popHeader" class="wide">
+	<h3 class="xeAdmin">{$lang->music_list}</h3>
+</div>
+
+<div id="popBody">
+	<form action="{getUrl('')}" method="post" enctype="multipart/form-data">
+		<input type="hidden" name="module" value="splayer" />
+		<input type="hidden" name="act" value="procSplayerAdminInsertMusic" />
+
+		<table class="rowTable">
+		<tr>
+			<th>음악 이름</th>
+			<td><input type="text" name="music_title" value="{htmlspecialchars($music_info->title)}" class="inputTypeText fullWidth" /></td>
+		</tr>
+		<tr>
+			<th>음악 파일</th>
+			<td><input type="file" name="music_file" value="" class="inputTypeText fullWidth" /></td>
+		</tr>
+		<tr>
+			<th>가수</th>
+			<td><input type="text" name="artist" value="" class="inputTypeText" /></td>
+		</tr>
+		<tr>
+			<th>앨범</th>
+			<td><input type="text" name="album" value="" class="inputTypeText" /></td>
+		</tr>
+		<tr>
+			<th>설명</th>
+			<td><textarea name="comment" class="inputTypeTextArea fullWidth"></textarea></td>
+		</tr>
+		<tr>
+			<th class="button" colspan="2"><span class="button black strong"><input type="submit" value="{$lang->cmd_submit}" /></span></th>
+		</tr>
+		</table>
+	</form>
+</div>
+
+<div id="popFooter">
+	<a href="{getUrl('act', 'dispSplayerAdminMusicList')}" class="button"><span>{$lang->cmd_back}</span></a>
+</div>

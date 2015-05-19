@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lang>
+	<item name="musicbox">
+		<value xml:lang="ko"><![CDATA[뮤직박스]]></value>
+	</item>
+	<item name="cmd_player_list">
+		<value xml:lang="ko"><![CDATA[플레이어 목록]]></value>
+	</item>
+	<item name="cmd_manage_playlist">
+		<value xml:lang="ko"><![CDATA[재생 목록 관리]]></value>
+	</item>
+	<item name="playlist_title">
+		<value xml:lang="ko"><![CDATA[재생 목록 이름]]></value>
+	</item>
+	<item name="playlist_title">
+		<value xml:lang="ko"><![CDATA[재생 목록을 쉽게 구분할 수 있는 이름을 입력해 주세요.<br /><br />(1 ~ 20자 이내)]]></value>
+	</item>
+	<item name="about_playlist_description">
+		<value xml:lang="ko"><![CDATA[관리용으로 사용되는 설명입니다.<br /><br />(1 ~ 250자 이내)]]></value>
+	</item>
+	<item name="music_list">
+		<value xml:lang="ko"><![CDATA[음악 목록]]></value>
+	</item>
+	<item name="cmd_upload_music">
+		<value xml:lang="ko"><![CDATA[음악 업로드]]></value>
+	</item>
+	<item name="music_title">
+		<value xml:lang="ko"><![CDATA[음악 이름]]></value>
+	</item>
+	<item name="artist">
+		<value xml:lang="ko"><![CDATA[아티스트]]></value>
+	</item>
+	<item name="album">
+		<value xml:lang="ko"><![CDATA[앨범]]></value>
+	</item>
+	<item name="msg_musicbox_login_required">
+		<value xml:lang="ko"><![CDATA[로그인 후 사용할 수 있습니다.]]></value>
+	</item>
+	<item name="msg_musicbox_not_permitted">
+		<value xml:lang="ko"><![CDATA[듣기 권한이 없습니다.]]></value>
+	</item>
+</lang>

@@ -1,0 +1,11 @@
+<query id="getMusicLyric" action="select">
+	<tables>
+		<table name="musicbox_music" />
+	</tables>
+	<columns>
+		<column name="lyric" />
+	</columns>
+	<conditions>
+		<condition operation="equal" column="music_srl" var="music_srl" />
+	</conditions>
+</query>

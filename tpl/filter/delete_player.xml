@@ -1,0 +1,10 @@
+<filter name="delete_player" module="splayer" act="procSplayerAdminDeletePlayer">
+	<form>
+		<node target="module_srl" required="true" />
+	</form>
+	<response callback_func="completeDeletePlayer">
+		<tag name="error" />
+		<tag name="message" />
+		<tag name="page" />
+	</response>
+</filter>

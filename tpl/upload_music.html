@@ -1,0 +1,71 @@
+<include target="header.html" />
+
+<div class="message {$XE_VALIDATOR_MESSAGE_TYPE}" cond="$XE_VALIDATOR_MESSAGE">
+	<p>{$XE_VALIDATOR_MESSAGE}</p>
+</div>
+<form action="./" method="post" class="x_form-horizontal" enctype="multipart/form-data">
+	<input type="hidden" name="module" value="musicbox">
+	<input type="hidden" name="act" value="procMusicboxAdminUploadMusic">
+	<input type="hidden" name="success_return_url" value="">
+	<input type="hidden" name="module_srl" value="{$module_srl}">
+	<input type="hidden" name="music_srl" value="{$music_srl}">
+
+	<div class="x_control-group">
+		<div class="x_controls">
+			
+		</div>
+	</div>
+	<div class="x_control-group">
+		<label for="" class="x_control-label">제목</label>
+		<div class="x_controls">
+			<input type="text" name="music_title" value="{$oMusic->title}" required> 
+		</div>
+	</div>
+	<div class="x_control-group">
+		<label for="" class="x_control-label">앨범</label>
+		<div class="x_controls">
+			<input type="text" name="music_album" value="{$oMusic->album}" required> 
+		</div>
+	</div>
+	<div class="x_control-group">
+		<label for="" class="x_control-label">아티스트</label>
+		<div class="x_controls">
+			<input type="text" name="music_artist" value="{$oMusic->artist}" required> 
+		</div>
+	</div>
+	<div class="x_control-group">
+		<label for="" class="x_control-label">MP3 파일</label>
+		<div class="x_controls">
+			<input type="file" name="mp3_file" accept="audio/mpeg">
+			<br>
+			{$oMusic->source_filename} <span>[{FileHandler::filesize($oMusic->file_size)}]</span>
+		</div>
+	</div>
+	<div class="x_control-group">
+		<label for="" class="x_control-label">가사</label>
+		<div class="x_controls">
+			<textarea name="lyric" value="" placeholder="" class="x_input-xxlarge">{$oMusic->lyric}</textarea>
+			<p class="x_help-block">
+				작성 방법<br><br>
+				[00:10.00] 동해물과 백두산이 마르고 닳도록<br>
+				[00:16.00] 하느님이 보우하사 우리나라 만세
+			</p>
+		</div>
+	</div>
+	<!--<div class="x_control-group">
+		<label for="" class="x_control-label">WAV 파일</label>
+		<div class="x_controls">
+			<input type="file" name="mp3_file">
+		</div>
+	</div>
+	<div class="x_control-group">
+		<label for="" class="x_control-label">OGG 파일</label>
+		<div class="x_controls">
+			<input type="file" name="oga_file">
+		</div>
+	</div>-->
+
+	<div class="btnArea">
+		<input type="submit" class="x_btn x_btn-primary">
+	</div>
+</form>
